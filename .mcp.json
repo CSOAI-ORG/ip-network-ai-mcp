@@ -1,0 +1,23 @@
+{
+  "name": "ip-network-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Ip Network tools for AI agents and LLMs",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/ip-network-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "parse_ip",
+    "subnet_calculator",
+    "cidr_to_range",
+    "dns_lookup_data"
+  ],
+  "categories": [
+    "Networking",
+    "DevOps"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
