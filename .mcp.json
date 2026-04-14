@@ -1,23 +1,67 @@
 {
   "name": "ip-network-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Ip Network tools for AI agents and LLMs",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/ip-network-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "MCP server for networking tools.",
+  "version": "1.0.0",
   "tools": [
-    "parse_ip",
-    "subnet_calculator",
-    "cidr_to_range",
-    "dns_lookup_data"
-  ],
-  "categories": [
-    "Networking",
-    "DevOps"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "parse_ip",
+      "description": "Parse and analyze an IP address (v4 or v6).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "ip_address": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "ip_address"
+        ]
+      }
+    },
+    {
+      "name": "subnet_calculator",
+      "description": "Calculate subnet details from CIDR notation (e.g., 192.168.1.0/24).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "network": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "network"
+        ]
+      }
+    },
+    {
+      "name": "cidr_to_range",
+      "description": "Convert CIDR notation to IP range with detailed info.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "cidr": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "cidr"
+        ]
+      }
+    },
+    {
+      "name": "dns_lookup_data",
+      "description": "Perform DNS lookup for a hostname.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "hostname"
+        ]
+      }
+    }
+  ]
 }

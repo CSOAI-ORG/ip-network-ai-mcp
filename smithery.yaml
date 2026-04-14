@@ -1,10 +1,28 @@
 name: ip-network-ai-mcp
-description: "MEOK AI Labs — Ip Network tools for AI agents and LLMs"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/ip-network-ai-mcp
-license: MIT
-categories: [Networking, DevOps]
-tags: [ip-address, networking, subnet, cidr, network-tools, dns]
-runtime: python
-entrypoint: server.py
+description: MCP server for networking tools.
+version: 1.0.0
+tools:
+- name: parse_ip
+  description: Parse and analyze an IP address (v4 or v6).
+  parameters:
+  - name: ip_address
+    type: string
+    required: true
+- name: subnet_calculator
+  description: Calculate subnet details from CIDR notation (e.g., 192.168.1.0/24).
+  parameters:
+  - name: network
+    type: string
+    required: true
+- name: cidr_to_range
+  description: Convert CIDR notation to IP range with detailed info.
+  parameters:
+  - name: cidr
+    type: string
+    required: true
+- name: dns_lookup_data
+  description: Perform DNS lookup for a hostname.
+  parameters:
+  - name: hostname
+    type: string
+    required: true

@@ -1,4 +1,9 @@
 """IP Network AI MCP Server — Networking tools."""
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import ipaddress
 import socket
 import time
@@ -33,8 +38,12 @@ PRIVATE_RANGES = [
 ]
 
 @mcp.tool()
-def parse_ip(ip_address: str) -> dict[str, Any]:
+def parse_ip(ip_address: str, api_key: str = "") -> dict[str, Any]:
     """Parse and analyze an IP address (v4 or v6)."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("parse_ip"):
         return {"error": "Rate limit exceeded (50/day)"}
     try:
@@ -60,8 +69,12 @@ def parse_ip(ip_address: str) -> dict[str, Any]:
     return result
 
 @mcp.tool()
-def subnet_calculator(network: str) -> dict[str, Any]:
+def subnet_calculator(network: str, api_key: str = "") -> dict[str, Any]:
     """Calculate subnet details from CIDR notation (e.g., 192.168.1.0/24)."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("subnet_calculator"):
         return {"error": "Rate limit exceeded (50/day)"}
     try:
@@ -86,8 +99,12 @@ def subnet_calculator(network: str) -> dict[str, Any]:
     return result
 
 @mcp.tool()
-def cidr_to_range(cidr: str) -> dict[str, Any]:
+def cidr_to_range(cidr: str, api_key: str = "") -> dict[str, Any]:
     """Convert CIDR notation to IP range with detailed info."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("cidr_to_range"):
         return {"error": "Rate limit exceeded (50/day)"}
     try:
@@ -108,8 +125,12 @@ def cidr_to_range(cidr: str) -> dict[str, Any]:
     }
 
 @mcp.tool()
-def dns_lookup_data(hostname: str) -> dict[str, Any]:
+def dns_lookup_data(hostname: str, api_key: str = "") -> dict[str, Any]:
     """Perform DNS lookup for a hostname."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("dns_lookup_data"):
         return {"error": "Rate limit exceeded (50/day)"}
     results: dict[str, Any] = {"hostname": hostname}
