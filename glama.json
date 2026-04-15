@@ -1,0 +1,10 @@
+{
+  "name": "ip-network-ai-mcp",
+  "description": "MEOK AI Labs \u2014 ip-network-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/ip-network-ai-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}

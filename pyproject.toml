@@ -22,3 +22,6 @@ Repository = "https://github.com/CSOAI-ORG/ip-network-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+ip_network_ai_mcp = "server:main"
