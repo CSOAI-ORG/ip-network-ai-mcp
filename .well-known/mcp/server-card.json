@@ -1,0 +1,52 @@
+{
+  "name": "ip-network-ai",
+  "description": "Ip Network Ai tools powered by MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/ip-network-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "parse_ip",
+      "description": "Parse and analyze an IP address (v4 or v6)."
+    },
+    {
+      "name": "subnet_calculator",
+      "description": "Calculate subnet details from CIDR notation (e.g., 192.168.1.0/24)."
+    },
+    {
+      "name": "cidr_to_range",
+      "description": "Convert CIDR notation to IP range with detailed info."
+    },
+    {
+      "name": "dns_lookup_data",
+      "description": "Perform DNS lookup for a hostname."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
