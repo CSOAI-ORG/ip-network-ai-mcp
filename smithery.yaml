@@ -1,5 +1,5 @@
 name: ip-network-ai-mcp
-description: MCP server for networking tools.
+description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools:
 - name: parse_ip
