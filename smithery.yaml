@@ -1,5 +1,6 @@
 name: ip-network-ai-mcp
-description: MEOK AI Labs MCP Server
+description: MCP server for ip network ai. Features parse ip, subnet calculator, cidr
+  to range. From MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: parse_ip
