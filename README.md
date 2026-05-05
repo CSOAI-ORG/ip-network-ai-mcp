@@ -1,49 +1,38 @@
-# IP Network AI
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Networking tools for IP analysis, subnetting, and DNS
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/ip-network-ai-mcp)](https://github.com/CSOAI-ORG/ip-network-ai-mcp/stargazers)
+
+# uipU networkU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/ip-network-ai-mcp)](https://www.npmjs.com/package/@meok-ai/ip-network-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/ip-network-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install ip-network-ai-mcp
+# or
+npm install -g @meok-ai/ip-network-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `parse_ip`
-Parse and analyze an IP address (v4 or v6). Returns version, class, binary representation, and scope flags.
-
-**Parameters:**
-- `ip_address` (str): IPv4 or IPv6 address to analyze
-
-### `subnet_calculator`
-Calculate subnet details from CIDR notation (e.g., 192.168.1.0/24).
-
-**Parameters:**
-- `network` (str): Network in CIDR notation
-
-### `cidr_to_range`
-Convert CIDR notation to IP range with detailed info.
-
-**Parameters:**
-- `cidr` (str): CIDR notation to convert
-
-### `dns_lookup_data`
-Perform DNS lookup for a hostname including reverse DNS and IPv4/IPv6 resolution.
-
-**Parameters:**
-- `hostname` (str): Hostname to resolve
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
