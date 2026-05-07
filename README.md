@@ -1,3 +1,5 @@
+[![ip-network-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/ip-network-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/ip-network-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/ip-network-ai-mcp)](https://github.com/CSOAI-ORG/ip-network-ai-mcp/stargazers)
