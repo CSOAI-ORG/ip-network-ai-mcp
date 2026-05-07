@@ -52,7 +52,23 @@ PRIVATE_RANGES = [
 
 @mcp.tool()
 def parse_ip(ip_address: str, api_key: str = "") -> dict[str, Any]:
-    """Parse and analyze an IP address (v4 or v6)."""
+    """Parse and analyze an IP address (v4 or v6).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -84,7 +100,23 @@ def parse_ip(ip_address: str, api_key: str = "") -> dict[str, Any]:
 
 @mcp.tool()
 def subnet_calculator(network: str, api_key: str = "") -> dict[str, Any]:
-    """Calculate subnet details from CIDR notation (e.g., 192.168.1.0/24)."""
+    """Calculate subnet details from CIDR notation (e.g., 192.168.1.0/24).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -115,7 +147,23 @@ def subnet_calculator(network: str, api_key: str = "") -> dict[str, Any]:
 
 @mcp.tool()
 def cidr_to_range(cidr: str, api_key: str = "") -> dict[str, Any]:
-    """Convert CIDR notation to IP range with detailed info."""
+    """Convert CIDR notation to IP range with detailed info.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -142,7 +190,23 @@ def cidr_to_range(cidr: str, api_key: str = "") -> dict[str, Any]:
 
 @mcp.tool()
 def dns_lookup_data(hostname: str, api_key: str = "") -> dict[str, Any]:
-    """Perform DNS lookup for a hostname."""
+    """Perform DNS lookup for a hostname.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
