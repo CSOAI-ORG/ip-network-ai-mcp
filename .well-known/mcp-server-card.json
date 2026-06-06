@@ -1,0 +1,25 @@
+{
+  "name": "ip-network-ai-mcp",
+  "title": "Ip Network Ai Mcp",
+  "description": "MCP server for ip network ai. Features parse ip, subnet calculator, cidr to range. From MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "parse_ip"
+    },
+    {
+      "name": "subnet_calculator"
+    },
+    {
+      "name": "cidr_to_range"
+    },
+    {
+      "name": "dns_lookup_data"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+# ip-network-ai-mcp
+# **IP Network AI MCP Server — Networking tools.**
+
+## Install
+```bash
+pip install ip-network-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `parse_ip`
+Parse and analyze an IP address (v4 or v6).
+
+### `subnet_calculator`
+Calculate subnet details from CIDR notation (e.g., 192.168.1.0/24).
+
+### `cidr_to_range`
+Convert CIDR notation to IP range with detailed info.
+
+### `dns_lookup_data`
+Perform DNS lookup for a hostname.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

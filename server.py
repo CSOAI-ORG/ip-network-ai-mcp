@@ -1,7 +1,7 @@
-"""IP Network AI MCP Server — Networking tools."""
+"""
+IP Network AI MCP Server — Networking tools."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import ipaddress
@@ -90,7 +90,7 @@ def parse_ip(ip_address: str, api_key: str = "") -> dict[str, Any]:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     if not _rate_check("parse_ip"):
@@ -157,7 +157,7 @@ def subnet_calculator(network: str, api_key: str = "") -> dict[str, Any]:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     if not _rate_check("subnet_calculator"):
@@ -223,7 +223,7 @@ def cidr_to_range(cidr: str, api_key: str = "") -> dict[str, Any]:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     if not _rate_check("cidr_to_range"):
@@ -285,7 +285,7 @@ def dns_lookup_data(hostname: str, api_key: str = "") -> dict[str, Any]:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     if not _rate_check("dns_lookup_data"):
@@ -319,5 +319,8 @@ def dns_lookup_data(hostname: str, api_key: str = "") -> dict[str, Any]:
     results["common_services"] = {str(p): name for p, name in COMMON_PORTS.items()}
     return results
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
