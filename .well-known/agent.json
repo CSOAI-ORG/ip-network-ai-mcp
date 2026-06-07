@@ -1,0 +1,59 @@
+{
+  "name": "ip-network-ai-mcp",
+  "description": "Ip Network Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/ip-network-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "parse_ip",
+      "name": "Parse Ip",
+      "description": "parse_ip via ip-network-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "subnet_calculator",
+      "name": "Subnet Calculator",
+      "description": "subnet_calculator via ip-network-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "cidr_to_range",
+      "name": "Cidr To Range",
+      "description": "cidr_to_range via ip-network-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "dns_lookup_data",
+      "name": "Dns Lookup Data",
+      "description": "dns_lookup_data via ip-network-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

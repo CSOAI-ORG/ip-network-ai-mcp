@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "ip-network-ai-mcp",
+    "description": "Ip Network Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "ip-network-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "parse_ip",
+      "subnet_calculator",
+      "cidr_to_range",
+      "dns_lookup_data"
+    ]
+  }
+}
